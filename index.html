@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueLock | Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Blue<span>Lock</span></h1>
+            <p>Create a strong password in seconds.</p>
+        </header>
+
+        <div class="password-box">
+            <input type="text" id="password"
+                   placeholder="Your password appears here"
+                   readonly>
+            <button id="copyBtn">Copy</button>
+        </div>
+
+        <h2>Password Length</h2>
+        <div class="options">
+            <label>
+                <input type="radio" name="length" value="8">
+                Short (8)
+            </label>
+            <label>
+                <input type="radio" name="length" value="12" checked>
+                Medium (12)
+            </label>
+            <label>
+                <input type="radio" name="length" value="20">
+                Long (20)
+            </label>
+        </div>
+
+        <h2>Password Type</h2>
+        <div class="options">
+            <label>
+                <input type="radio" name="type" value="letters">
+                Letters only
+            </label>
+            <label>
+                <input type="radio" name="type" value="numbers">
+                Numbers only
+            </label>
+            <label>
+                <input type="radio" name="type" value="mixed" checked>
+                Letters + numbers
+            </label>
+            <label>
+                <input type="radio" name="type" value="all">
+                All characters
+            </label>
+        </div>
+
+        <h2>Rememberable Phrase</h2>
+        <label class="phrase-option">
+            <input type="checkbox" id="usePhrase">
+            Include a phrase to help remember it
+        </label>
+
+        <input type="text" id="phrase"
+               placeholder="Enter your memorable phrase"
+               disabled>
+
+        <button class="generate-btn" id="generateBtn">
+    Generate Password
+</button>
+
+<button class="faux-metal" id="clearBtn" >
+    Clear Password
+</button>
+<button class="faux-metal" id="generateBtn">
+    <span>Generate Password</span>
+</button>
+
+        <p id="message"></p>
+
+        <footer>
+            Keep your passwords private and secure
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
